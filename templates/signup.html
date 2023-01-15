@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Student registration form</h3>
+                  <form method="post">
+                    {%csrf_token%}
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input type="text" id="first-name" class="form-control form-control-lg" name="first_name"/>
+                                <label class="form-label" for="form3Example1m">First name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input type="text" id="last-namr" class="form-control form-control-lg" name="last_name"/>
+                                <label class="form-label" for="form3Example1n">Last name</label>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="form-outline mb-4">
+                        <input type="text" id="adress" class="form-control form-control-lg" name="adress"/>
+                        <label class="form-label" for="form3Example8">Address</label>
+                    </div>
+                
+                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                        <h6 class="mb-0 me-4">Gender: </h6>
+                        <div class="form-check form-check-inline mb-0 me-4">
+                            <input class="form-check-input" type="radio" name="gender" id="femaleGender" value="female" />
+                            <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline mb-0 me-4">
+                            <input class="form-check-input" type="radio" name="gender" id="maleGender" value="male" />
+                            <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="numero" class="form-control form-control--lg" name="numero"/>
+                        <label class="form-label" for="form3Example8">Numero</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                        <input type="email" id="email" class="form-control form-control-lg" name="email"/>
+                        <label class="form-label" for="form3Example8">Email</label>
+                        </div>
+                        <div class="form-outline mb-4">
+                        <input type="password" id="password" class="form-control form-control-lg" name="password"/>
+                        <label class="form-label" for="form3Example8">Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign up</button>
+                        
+                        </form>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+{% endblock content %}
